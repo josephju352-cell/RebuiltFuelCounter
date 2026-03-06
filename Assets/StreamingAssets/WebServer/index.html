@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rebuilt Fuel Counter</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Rebuilt Fuel Counter</h1>
+        </header>
+        
+        <main>
+            <div class="card main-stat">
+                <span class="label">Total Fuel Count</span>
+                <span class="value large" id="fuel-count">0</span>
+                <button id="btn-mute" class="btn-mute-overlay" title="Toggle Sound">
+                    <svg id="icon-unmuted" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M560-131v-82q90-26 145-100t55-168q0-94-55-168T560-749v-82q124 28 202 125.5T840-481q0 127-78 224.5T560-131ZM120-360v-240h160l200-200v640L280-360H120Zm440 40v-322q47 22 73.5 66t26.5 96q0 51-26.5 94.5T560-320ZM400-606l-86 86H200v80h114l86 86v-252ZM300-480Z"/></svg>
+                    <svg id="icon-muted" style="display:none" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M792-56 671-177q-25 16-53 27.5T560-131v-82q14-5 27.5-10t25.5-12L480-368v208L280-360H120v-240h128L56-792l56-56 736 736-56 56Zm-8-232-58-58q17-31 25.5-65t8.5-70q0-94-55-168T560-749v-82q124 28 202 125.5T840-481q0 53-14.5 102T784-288ZM650-422l-90-90v-130q47 22 73.5 66t26.5 96q0 15-2.5 29.5T650-422ZM480-592 376-696l104-104v208Zm-80 238v-94l-72-72H200v80h114l86 86Zm-36-130Z"/></svg>
+                </button>
+            </div>
+
+            <div class="stat-grid">
+                <div class="card clickable" id="rate-toggle">
+                    <span class="label" id="rate-label">RATE PER MIN</span>
+                    <span class="value rate" id="fuel-rate">0.0</span>
+                    <svg class="touch-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M419-80q-28 0-52.5-12T325-126L107-403l19-20q20-21 48-25t52 11l74 45v-328q0-17 11.5-28.5T340-760q17 0 29 11.5t12 28.5v472l-97-60 104 133q6 7 14 11t17 4h221q33 0 56.5-23.5T720-240v-160q0-17-11.5-28.5T680-440H461v-80h219q50 0 85 35t35 85v160q0 66-47 113T640-80H419ZM167-620q-13-22-20-47.5t-7-52.5q0-83 58.5-141.5T340-920q83 0 141.5 58.5T540-720q0 27-7 52.5T513-620l-69-40q8-14 12-28.5t4-31.5q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 17 4 31.5t12 28.5l-69 40Zm335 280Z"/></svg>
+                </div>
+                <div class="card">
+                    <span class="label">RATE TIMER</span>
+                    <span class="value timer" id="uptime">00:00:00</span>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button id="btn-reset-count" class="btn danger">Reset Count</button>
+                <button id="btn-reset-timer" class="btn warning">Reset Timer</button>
+            </div>
+            
+            <div class="card log-card">
+                <h2>Activity Log</h2>
+                <ul id="log-list"></ul>
+            </div>
+        </main>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
