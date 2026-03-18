@@ -74,6 +74,6 @@ This is an open-source project for the FRC community. Contributions in the form 
 This project is released under the [MIT License](LICENSE).
 
 
-/Docs/image_1950.png
-/Docs/FrameAnalysis2.png
-/Docs/FrameAnalysis1.png
+\Docs\image_1950.png
+\Docs\FrameAnalysis2.png
+\Docs\FrameAnalysis1.png
